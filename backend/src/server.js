@@ -10,19 +10,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/tarefas', (req, res) => {
-  res.json({ message: 'GET (Select)' });
+  res.json({ message: 'GET' });
 });
 
 app.post('/tarefas', (req, res) => {
-  res.json({ message: 'POST (Insert)' });
+  res.json({ message: 'POST' });
 });
 
 app.put('/tarefas/:id', (req, res) => {
-  res.json({ message: 'PUT (Update)', taskId: req.params.id });
+  res.json({ message: 'PUT', taskId: req.params.id });
 });
 
 app.delete('/tarefas/:id', (req, res) => {
-  res.json({ message: 'DELETE (Delete)', taskId: req.params.id });
+  res.json({ message: 'DELETE', taskId: req.params.id });
 });
 
 app.listen(PORT, () => {
